@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+*{box-sizing:border-box;}
+html{font-size: 10px;}
+html, body{margin: 0; padding: 0;}
+header, section, article, aside, main, nav, footer{display: block;}
+h1, h2, h3, h4, h5, h6, p{margin: 0; padding: 0; user-select: none;}
+ul, ol{margin: 0; padding: 0; list-style: none;}
+a{text-decoration: none;}
+:root{
+    --main-grey: #555;
+    --light-grey: #A0A0A0;
+}
+.wrap{
+    width: 1200px;
+    height: 100%;
+    padding: 0 10px;
+    margin: 0 auto;
+    font-size: 1.6rem;
+    color: var(--main-grey);
+}
+body.openPop{overflow-y: hidden;}
+
+/* header part */
+header{
+    height: 70px;
+    background-color: #fff;
+}
+header .wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .wrap .logo{}
+header .wrap .logo a{display: block;}
+header .wrap .logo a img{
+    display: block;
+    height: 40px;
+}
+
+header .wrap .menu{}
+header .wrap .menu ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+header .wrap .menu ul li:not(:first-child){padding-left: 30px;}
+header .wrap .menu ul li a{
+    display: block;
+    color: var(--main-grey);
+    text-transform: uppercase;
+}
+header .wrap .menu ul li a:hover{
+    color: black;
+    transition: color 0.5s;
+}
+
+
+/* footer part */
+footer{
+    height: 190px;
+    background-color: var(--main-grey);
+}
+footer .wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #fff;
+}
+
+footer .wrap .guide_links{
+    width: 100%;
+    font-size: 1.4rem;
+    border-bottom: 1px solid var(--light-grey);
+    margin-bottom: 20px;
+}
+footer .wrap .guide_links ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+footer .wrap .guide_links ul li:not(:last-child){padding-right: 40px;}
+footer .wrap .guide_links ul li a{
+    line-height: 3rem;
+    color: #fff;
+}
+footer .wrap .guide_links ul li a:hover{
+    color: #999;
+    transition: color 0.5s;
+}
+
+footer .wrap .corp_list{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+footer .wrap .corp_list > ul{width: 50%;}
+footer .wrap .corp_list > ul > li{}
+footer .wrap .corp_list > ul > li > ul{display: flex;}
+footer .wrap .corp_list > ul > li > ul > li{line-height: 1.7;}
+footer .wrap .corp_list > ul > li > ul > li:not(:last-child){
+    padding-right: 10px;
+    position: relative;
+}
+footer .wrap .corp_list > ul > li > ul > li:not(:last-child)::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: calc(9px / 2);
+    width: 1px;
+    height: 12px;
+    background-color: #fff;
+}

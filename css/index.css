@@ -1,0 +1,339 @@
+@charset "utf-8";
+
+h3.title{
+    font-weight: normal;
+    font-size: 2.4rem;
+    line-height: 3rem;
+    text-align: center;
+    padding-bottom: 40px;
+}
+section .wrap{padding: 60px 10px;}
+
+/* popup part */
+section .dark_bg{
+    width: 100%;
+    height: 100%;
+    position:fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.6);
+    z-index:-1;
+    opacity: 0;
+}
+/* popup size_position */
+section .popup{
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    z-index: -1;
+    opacity: 0;
+}
+#section_01 .movie_popup{
+    width: 800px;
+    height: 480px;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+/* onclick Popup active */
+section .dark_bg.active, section .popup.active{
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+section .popup .close_btn{
+    position: absolute;
+    top: -45px;
+    right: -35px;
+    display: block;
+    font-size: 4rem;
+    line-height: 1;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+}
+section .popup .close_btn:hover{
+    text-shadow:0 0 5px #888;
+    transition: text-shadow 0.5s;
+}
+
+
+
+/* main part */
+main{
+    width: 100%;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+main ul.slides{
+    width: 300%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+main ul.slides li{
+    width: calc(100% / 3);
+    height: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+main .wrap{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+main .wrap .main_title{width: calc((100% / 12) * 8);}
+main .wrap .main_title h2{
+    width: calc(50% - 20px);
+    font-size: 3.2rem;
+    padding-bottom: 25px;
+}
+main .wrap .main_title .audition_btn{
+    width: 140px;
+    height: 30px;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+main .wrap .main_title .audition_btn a{
+    display: block;
+    color: #fff;
+}
+main .wrap .main_title .audition_btn:hover{background-color: #fff; transition: background-color 0.5s;}
+main .wrap .main_title .audition_btn:hover a{color: var(--main-grey);  transition: color 0.5s;}
+
+
+/* section01 part */
+#section_01{}
+#section_01 .wrap{}
+#section_01 .wrap .title{}
+#section_01 .wrap .cont{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+}
+#section_01 .wrap .cont .movie_box{
+    width: 380px;
+}
+#section_01 .wrap .cont .movie_box .movie_img{
+    height: 200px;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+#section_01 .wrap .cont .movie_box .movie_img .dark{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#section_01 .wrap .cont .movie_box .movie_img .dark .play_btn{
+    width: 40px;
+    height: 40px;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-image: url(../img/play_icon.png);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+#section_01 .wrap .cont .movie_box .movie_img:hover .dark{
+    background-color: rgba(0,0,0,0.3);
+    transition: background-color 0.5s;
+}
+#section_01 .wrap .cont .movie_box .movie_title{padding: 20px 0;}
+
+
+/* banner_01 part */
+#banner_01{
+    height: 300px;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-image: url(../img/visual_04.png);
+    text-align: center;
+}
+#banner_01 .wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+#banner_01 .wrap .title{}
+#banner_01 .wrap .sub{padding-bottom: 30px;}
+#banner_01 .wrap .sub p{}
+#banner_01 .wrap .audition_info_btn{
+    width: 200px;
+    height: 30px;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+#banner_01 .wrap .audition_info_btn a{
+    display: block;
+    color: #fff;
+}
+#banner_01 .wrap .audition_info_btn:hover{background-color: #fff; transition: background-color 0.5s;}
+#banner_01 .wrap .audition_info_btn:hover a{color: var(--main-grey);  transition: color 0.5s;}
+
+
+
+/* section_02 part */
+#section_02{}
+#section_02 .wrap{color: #fff;}
+#section_02 .wrap .title{}
+#section_02 .wrap .cont{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+}
+#section_02 .wrap .cont .actor_box{
+    width: 380px;
+    height: 380px;
+    position: relative;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+}
+#section_02 .wrap .cont .actor_box .actor_info{
+    width: 100%;
+    height: 60px;
+    padding: 0 20px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#section_02 .wrap .cont .actor_box .actor_info .name{font-size: 1.8rem;}
+#section_02 .wrap .cont .actor_box .actor_info .filmograph_btn{
+    width: 160px;
+    height: 30px;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    font-size: 1.4rem;
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+}
+#section_02 .wrap .cont .actor_box .actor_info .filmograph_btn:hover{
+    background-color: #fff;
+    color: var(--main-grey);
+    transition: background-color 0.5s, color 0.5s;
+}
+#section_02 .wrap .more_btn{
+    width: 180px;
+    height: 40px;
+    margin: 0 auto;
+    background-color: var(--main-grey);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    cursor: pointer;
+}
+#section_02 .wrap .more_btn a{
+    display: block;
+    color: #fff;
+}
+#section_02 .wrap .more_btn:hover{
+    background-color: #ccc;
+    transition: background-color 0.5s;
+}
+#section_02 .wrap .more_btn:hover a{
+    color: var(--main-grey);
+    transition: color 0.5s;
+}
+
+/* section_03 part */
+#section_03{
+    height: 480px;
+    background-image: url(../img/content_03.png);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+#section_03 .wrap{
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: center;
+    text-align: center;
+}
+#section_03 .wrap .title{}
+#section_03 .wrap .cont{
+    position: relative;
+    width: 100%;
+    height: 260px;
+}
+#section_03 .wrap .cont .review_box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    opacity:0;
+    transition: opacity 1s;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+#section_03 .wrap .cont .review_box.show{
+    z-index: 1;
+    opacity: 1;
+}
+#section_03 .wrap .cont .review_box .review_txt{
+    width: calc((100% / 12) * 8 - 20px);
+    height: 100px;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    padding-bottom: 20px;
+}
+#section_03 .wrap .cont .review_box .circle_img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-size: 120%;
+    background-position: 20% 10%;
+}
+#section_03 .wrap .cont .review_box .name{
+    font-size: 1.4rem;
+    line-height: 2rem;
+    padding: 20px 0;
+}
+#section_03 .wrap .list_btn{
+    display: flex;
+    flex-wrap: wrap;
+}
+#section_03 .wrap .list_btn li{
+    width: 20px;
+    height: 20px;
+    margin: 0 15px;
+    border-radius: 50%;
+    background-color: var(--light-grey);
+    cursor: pointer;
+}
+#section_03 .wrap .list_btn li.active{background-color: #fff;}
